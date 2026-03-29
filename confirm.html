@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Scholarship — Confirm Your Spot</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; min-height: 100vh; }
+        .container { max-width: 640px; margin: 0 auto; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 28px; margin-bottom: 8px; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .header p { color: #888; font-size: 16px; }
+        .badge { display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+        form { display: flex; flex-direction: column; gap: 20px; }
+        label { font-size: 14px; font-weight: 600; color: #ccc; margin-bottom: 4px; display: block; }
+        input, select, textarea { width: 100%; padding: 14px 16px; border: 1px solid #333; border-radius: 10px; background: #1a1a1a; color: #fff; font-size: 15px; outline: none; transition: border-color 0.2s; }
+        input:focus, select:focus, textarea:focus { border-color: #667eea; }
+        textarea { resize: vertical; min-height: 100px; }
+        select { appearance: none; cursor: pointer; }
+        .field { display: flex; flex-direction: column; gap: 6px; }
+        .required::after { content: " *"; color: #e74c3c; }
+        .submit-btn { background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 16px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; margin-top: 10px; }
+        .submit-btn:hover { opacity: 0.9; }
+        .note { background: #1a1a2e; border: 1px solid #333; border-radius: 10px; padding: 16px; margin-bottom: 30px; }
+        .note p { color: #aaa; font-size: 14px; line-height: 1.6; }
+        .note strong { color: #667eea; }
+        .success { display: none; text-align: center; padding: 60px 20px; }
+        .success h2 { font-size: 24px; margin-bottom: 12px; }
+        .success p { color: #888; font-size: 16px; }
+        .success .emoji { font-size: 60px; margin-bottom: 20px; }
+        .footer { text-align: center; margin-top: 40px; color: #555; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="badge">🎉 You've Been Selected!</div>
+            <h1>AI Agent Scholarship</h1>
+            <p>Confirm your spot & schedule your setup call with Evan</p>
+        </div>
+
+        <div class="note">
+            <p><strong>Congratulations!</strong> You've been selected from hundreds of applicants. Please fill out this form to confirm your spot and choose a time for your 1-on-1 Zoom call with Evan Luthra to get you started with your first AI agent.</p>
+        </div>
+
+        <form id="confirmForm" action="https://formsubmit.co/Evan@EvanLuthra.com" method="POST">
+            <input type="hidden" name="_subject" value="Scholarship Confirmed: New Scholar Ready for Setup Call">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://evan-luthra2026.github.io/scholarship-dashboard/confirm.html?success=true">
+
+            <div class="field">
+                <label class="required">Full Name</label>
+                <input type="text" name="name" required placeholder="Your full name">
+            </div>
+
+            <div class="field">
+                <label class="required">Email Address</label>
+                <input type="email" name="email" required placeholder="your@email.com">
+            </div>
+
+            <div class="field">
+                <label class="required">Country</label>
+                <input type="text" name="country" required placeholder="Your country">
+            </div>
+
+            <div class="field">
+                <label class="required">Timezone</label>
+                <select name="timezone" required>
+                    <option value="">Select your timezone</option>
+                    <option value="UTC-12:00">UTC-12:00 (Baker Island)</option>
+                    <option value="UTC-11:00">UTC-11:00 (Samoa)</option>
+                    <option value="UTC-10:00">UTC-10:00 (Hawaii)</option>
+                    <option value="UTC-09:00">UTC-09:00 (Alaska)</option>
+                    <option value="UTC-08:00">UTC-08:00 (Pacific Time)</option>
+                    <option value="UTC-07:00">UTC-07:00 (Mountain Time)</option>
+                    <option value="UTC-06:00">UTC-06:00 (Central Time)</option>
+                    <option value="UTC-05:00">UTC-05:00 (Eastern Time)</option>
+                    <option value="UTC-04:00">UTC-04:00 (Atlantic Time)</option>
+                    <option value="UTC-03:00">UTC-03:00 (Brazil)</option>
+                    <option value="UTC+00:00">UTC+00:00 (London, GMT)</option>
+                    <option value="UTC+01:00">UTC+01:00 (Central Europe)</option>
+                    <option value="UTC+02:00">UTC+02:00 (Eastern Europe)</option>
+                    <option value="UTC+03:00">UTC+03:00 (Moscow, Middle East)</option>
+                    <option value="UTC+04:00">UTC+04:00 (Dubai)</option>
+                    <option value="UTC+05:00">UTC+05:00 (Pakistan)</option>
+                    <option value="UTC+05:30" selected>UTC+05:30 (India)</option>
+                    <option value="UTC+06:00">UTC+06:00 (Bangladesh)</option>
+                    <option value="UTC+07:00">UTC+07:00 (Thailand, Vietnam)</option>
+                    <option value="UTC+08:00">UTC+08:00 (Singapore, China)</option>
+                    <option value="UTC+09:00">UTC+09:00 (Japan, Korea)</option>
+                    <option value="UTC+10:00">UTC+10:00 (Australia East)</option>
+                    <option value="UTC+11:00">UTC+11:00 (Solomon Islands)</option>
+                    <option value="UTC+12:00">UTC+12:00 (New Zealand)</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label class="required">Preferred Call Time</label>
+                <select name="preferred_time" required>
+                    <option value="">When works best for you?</option>
+                    <option value="Weekday Morning (9AM-12PM)">Weekday Morning (9AM-12PM your time)</option>
+                    <option value="Weekday Afternoon (12PM-5PM)">Weekday Afternoon (12PM-5PM your time)</option>
+                    <option value="Weekday Evening (5PM-9PM)">Weekday Evening (5PM-9PM your time)</option>
+                    <option value="Weekend Morning (9AM-12PM)">Weekend Morning (9AM-12PM your time)</option>
+                    <option value="Weekend Afternoon (12PM-5PM)">Weekend Afternoon (12PM-5PM your time)</option>
+                    <option value="Flexible - Any time works">Flexible — Any time works</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label class="required">What AI agent do you want to build?</label>
+                <textarea name="agent_idea" required placeholder="Briefly describe the AI agent you want to create and what problem it solves..."></textarea>
+            </div>
+
+            <div class="field">
+                <label>Technical Experience Level</label>
+                <select name="tech_level">
+                    <option value="">Select your level</option>
+                    <option value="Beginner - No coding experience">Beginner — No coding experience</option>
+                    <option value="Some experience - Basic coding/no-code tools">Some experience — Basic coding or no-code tools</option>
+                    <option value="Intermediate - Comfortable with APIs and code">Intermediate — Comfortable with APIs and code</option>
+                    <option value="Advanced - Professional developer">Advanced — Professional developer</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Telegram or WhatsApp (for coordination)</label>
+                <input type="text" name="contact" placeholder="@username or +phone number">
+            </div>
+
+            <button type="submit" class="submit-btn">✅ Confirm My Spot & Schedule Call</button>
+        </form>
+
+        <div class="success" id="successMsg">
+            <div class="emoji">🎉</div>
+            <h2>You're confirmed!</h2>
+            <p>We'll reach out shortly to schedule your 1-on-1 setup call with Evan. Keep an eye on your email!</p>
+        </div>
+
+        <div class="footer">
+            <p>AI Agent Scholarship by Evan Luthra | Forbes 30 Under 30</p>
+        </div>
+    </div>
+
+    <script>
+        // Show success message if redirected back
+        if (window.location.search.includes('success=true')) {
+            document.getElementById('confirmForm').style.display = 'none';
+            document.querySelector('.note').style.display = 'none';
+            document.getElementById('successMsg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
